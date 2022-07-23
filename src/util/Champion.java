@@ -5,5 +5,5 @@ public class Champion {
 	public int vida;
 	public int ataque;
 	public int armadura;
-
+	
 }
