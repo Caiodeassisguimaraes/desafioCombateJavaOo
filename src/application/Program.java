@@ -3,34 +3,39 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import util.Champion;
+
 public class Program {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		Champion champion1, champion2;
+		champion1 = new Champion();
+		champion2 = new Champion();
 
 		System.out.println("Digite os dados do primeiro campeão: ");
 		System.out.print("Nome: ");
-		String nome1 = sc.nextLine();
+		champion1.nome = sc.nextLine();
 		System.out.print("Vida inicial: ");
-		int vida1 = sc.nextInt();
+		champion1.vida = sc.nextInt();
 		System.out.print("Ataque: ");
-		int ataque1 = sc.nextInt();
+		champion1.ataque = sc.nextInt();
 		System.out.print("Armadura: ");
-		int armadura1 = sc.nextInt();
+		champion1.armadura = sc.nextInt();
 
 		System.out.println();
 
 		System.out.println("Digite os dados do segundo campeão: ");
 		System.out.print("Nome: ");
 		sc.nextLine();
-		String nome2 = sc.nextLine();
+		champion2.nome = sc.nextLine();
 		System.out.print("Vida inicial: ");
-		int vida2 = sc.nextInt();
+		champion2.vida = sc.nextInt();
 		System.out.print("Ataque: ");
-		int ataque2 = sc.nextInt();
+		champion2.ataque = sc.nextInt();
 		System.out.print("Armadura: ");
-		int armadura2 = sc.nextInt();
+		champion2.armadura = sc.nextInt();
 
 		System.out.println();
 
@@ -41,29 +46,30 @@ public class Program {
 
 		for (int i = 0; i < turnos; i++) {
 			System.out.println("Resultado do turno " + (i + 1) + ":");
-			int combate1 = (vida1 + armadura1) - ataque2;
+			int combate1 = (champion1.vida + champion1.armadura) - champion2.ataque;
 			if (combate1 < 0) {
 				combate1 = 0;
 			}
-			if (armadura1 > ataque2) {
-				vida1 -= 1;
-				combate1 = vida1;
+			if (champion1.armadura > champion2.ataque) {
+				champion1.vida -= 1;
+				combate1 = champion1.vida;
 			}
-			vida1 = combate1;
-			int combate2 = (vida2 + armadura2) - ataque1;
+			champion1.vida = combate1;
+			int combate2 = (champion2.vida + champion2.armadura) - champion1.ataque;
 			if (combate2 < 0) {
 				combate2 = 0;
 			}
-			if (armadura2 > ataque1) {
-				vida2 -= 1;
-				combate2 = vida2;
+			if (champion2.armadura > champion1.ataque) {
+				champion2.vida -= 1;
+				combate2 = champion2.vida;
 			}
-			vida2 = combate2;
+			champion2.vida = combate2;
 			/*
 			 * if (vida1 = 0) { i = (turnos - 1); } if (vida2 = 0) { i = (turnos - 1); }
 			 */
-			System.out.println(nome1 + ": " + vida1 + " de vida");
-			System.out.println(nome2 + ": " + vida2 + " de vida");
+			System.out.println(champion1.nome + ": " + champion1.vida + " de vida");
+			System.out.println(champion2.nome + ": " + champion2.vida + " de vida");
+			System.out.println();
 		}
 
 		System.out.print("FIM DO COMBATE");
