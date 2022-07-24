@@ -2,10 +2,10 @@ package util;
 
 public class Champion {
 	//atributos	da Classe
-	public String nome;
-	public int vida;
-	public int ataque;
-	public int armadura;
+	private String nome;
+	private int vida;
+	private int ataque;
+	private int armadura;
 	
 	//Construtor
 	
@@ -15,5 +15,41 @@ public class Champion {
 		this.ataque = ataque;
 		this.armadura = armadura;
 	}
+
+	//Metodos Get e Set
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getVida() {
+		return vida;
+	}
+
+	public void setVida(int vida) {
+		this.vida = vida;
+	}
+
+	public int getAtaque() {
+		return ataque;
+	}
+
+	public void setAtaque(int ataque) {
+		this.ataque = ataque;
+	}
+
+	public int getArmadura() {
+		return armadura;
+	}
+
+	public void setArmadura(int armadura) {
+		this.armadura = armadura;
+	}
+	
+
 	
 }

@@ -49,37 +49,37 @@ public class Program {
 		for (int i = 0; i < turnos; i++) {
 			System.out.println("Resultado do turno " + (i + 1) + ":");
 
-			int combate1 = (champion1.vida + champion1.armadura) - champion2.ataque;
+			int combate1 = (champion1.getVida() + champion1.getArmadura()) - champion2.getAtaque();
 			if (combate1 < 0) {
 				combate1 = 0;
 			}
-			if (champion1.armadura > champion2.ataque) {
-				champion1.vida -= 1;
-				combate1 = champion1.vida;
+			if (champion1.getArmadura() > champion2.getAtaque()) {
+				champion1.setVida(champion1.getVida() - 1);
+				combate1 = champion1.getVida();
 			}
-			champion1.vida = combate1;
-			int combate2 = (champion2.vida + champion2.armadura) - champion1.ataque;
+			champion1.setVida(combate1);
+			int combate2 = (champion2.getVida() + champion2.getArmadura()) - champion1.getAtaque();
 			if (combate2 < 0) {
 				combate2 = 0;
 			}
-			if (champion2.armadura > champion1.ataque) {
-				champion2.vida -= 1;
-				combate2 = champion2.vida;
+			if (champion2.getArmadura() > champion1.getAtaque()) {
+				champion2.setVida(champion2.getVida() - 1);
+				combate2 = champion2.getVida();
 			}
-			champion2.vida = combate2;
-			if (champion1.vida == 0) {
+			champion2.setVida(combate2);
+			if (champion1.getVida() == 0) {
 				turnos = i;
-				System.out.println(champion1.nome + ": " + champion1.vida + " de vida (morreu)");
-				System.out.println(champion2.nome + ": " + champion2.vida + " de vida");
+				System.out.println(champion1.getNome() + ": " + champion1.getVida() + " de vida (morreu)");
+				System.out.println(champion2.getNome() + ": " + champion2.getVida() + " de vida");
 				System.out.println();
-			} else if (champion2.vida == 0) {
+			} else if (champion2.getVida() == 0) {
 				turnos = i;
-				System.out.println(champion1.nome + ": " + champion1.vida + " de vida");
-				System.out.println(champion2.nome + ": " + champion2.vida + " de vida (morreu)");
+				System.out.println(champion1.getNome() + ": " + champion1.getVida() + " de vida");
+				System.out.println(champion2.getNome() + ": " + champion2.getVida() + " de vida (morreu)");
 				System.out.println();
 			} else {
-				System.out.println(champion1.nome + ": " + champion1.vida + " de vida");
-				System.out.println(champion2.nome + ": " + champion2.vida + " de vida");
+				System.out.println(champion1.getNome() + ": " + champion1.getVida() + " de vida");
+				System.out.println(champion2.getNome() + ": " + champion2.getVida() + " de vida");
 				System.out.println();
 			}
 		}
