@@ -57,6 +57,7 @@ public class Program {
 				combate1 = champion1.getVida();
 			}
 			champion1.setVida(combate1);
+			
 			int combate2 = (champion2.getVida() + champion2.getArmadura()) - champion1.getAtaque();
 			if (combate2 < 0) {
 				combate2 = 0;

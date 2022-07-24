@@ -52,9 +52,9 @@ public class Champion {
 	
 	//Metodos
 	
-	public void takeDamage () {
+	/*public void takeDamage (Champion other) {
 		
-	}
+	}*/
 	
 	public String status () {
 		return nome + ": " + vida + " de vida (morreu)";
