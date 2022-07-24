@@ -11,30 +11,33 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		Champion champion1 = new Champion();
 		System.out.println("Digite os dados do primeiro campeão: ");
 		System.out.print("Nome: ");
-		champion1.nome = sc.nextLine();
+		String nome = sc.nextLine();
 		System.out.print("Vida inicial: ");
-		champion1.vida = sc.nextInt();
+		int vida = sc.nextInt();
 		System.out.print("Ataque: ");
-		champion1.ataque = sc.nextInt();
+		int ataque = sc.nextInt();
 		System.out.print("Armadura: ");
-		champion1.armadura = sc.nextInt();
+		int armadura = sc.nextInt();
+		
+		Champion champion1 = new Champion(nome, vida, ataque, armadura);
 
 		System.out.println();
 
-		Champion champion2 = new Champion();
+		
 		System.out.println("Digite os dados do segundo campeão: ");
 		System.out.print("Nome: ");
 		sc.nextLine();
-		champion2.nome = sc.nextLine();
+		nome = sc.nextLine();
 		System.out.print("Vida inicial: ");
-		champion2.vida = sc.nextInt();
+		vida = sc.nextInt();
 		System.out.print("Ataque: ");
-		champion2.ataque = sc.nextInt();
+		ataque = sc.nextInt();
 		System.out.print("Armadura: ");
-		champion2.armadura = sc.nextInt();
+		armadura = sc.nextInt();
+		
+		Champion champion2 = new Champion(nome, vida, ataque, armadura);
 
 		System.out.println();
 
