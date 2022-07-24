@@ -50,6 +50,14 @@ public class Champion {
 		this.armadura = armadura;
 	}
 	
-
+	//Metodos
+	
+	public void takeDamage () {
+		
+	}
+	
+	public String status () {
+		return nome + ": " + vida + " de vida (morreu)";
+	}
 	
 }

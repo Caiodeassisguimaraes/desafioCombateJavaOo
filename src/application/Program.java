@@ -20,12 +20,11 @@ public class Program {
 		int ataque = sc.nextInt();
 		System.out.print("Armadura: ");
 		int armadura = sc.nextInt();
-		
+
 		Champion champion1 = new Champion(nome, vida, ataque, armadura);
 
 		System.out.println();
 
-		
 		System.out.println("Digite os dados do segundo campeão: ");
 		System.out.print("Nome: ");
 		sc.nextLine();
@@ -36,7 +35,7 @@ public class Program {
 		ataque = sc.nextInt();
 		System.out.print("Armadura: ");
 		armadura = sc.nextInt();
-		
+
 		Champion champion2 = new Champion(nome, vida, ataque, armadura);
 
 		System.out.println();
@@ -69,13 +68,13 @@ public class Program {
 			champion2.setVida(combate2);
 			if (champion1.getVida() == 0) {
 				turnos = i;
-				System.out.println(champion1.getNome() + ": " + champion1.getVida() + " de vida (morreu)");
+				System.out.println(champion1.status());
 				System.out.println(champion2.getNome() + ": " + champion2.getVida() + " de vida");
 				System.out.println();
 			} else if (champion2.getVida() == 0) {
 				turnos = i;
 				System.out.println(champion1.getNome() + ": " + champion1.getVida() + " de vida");
-				System.out.println(champion2.getNome() + ": " + champion2.getVida() + " de vida (morreu)");
+				System.out.println(champion2.status());
 				System.out.println();
 			} else {
 				System.out.println(champion1.getNome() + ": " + champion1.getVida() + " de vida");
