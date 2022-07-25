@@ -51,10 +51,11 @@ public class Program {
 			System.out.println(champion1.status());
 			System.out.println(champion2.status());
 			if (champion1.getLife() == 0 || champion2.getLife() == 0) {
-				rounds = i;
+				break;
 			}
 			System.out.println();
 		}
+		System.out.println();
 		System.out.print("FIM DO COMBATE");
 		sc.close();
 	}

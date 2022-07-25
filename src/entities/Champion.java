@@ -18,49 +18,49 @@ public class Champion {
 
 	// Metodos Get e Set
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	/*
+	 * public String getName() { return name; }
+	 * 
+	 * public void setName(String name) { this.name = name; }
+	 */
 
 	public int getLife() {
 		return life;
 	}
 
-	public void setLife(int vida) {
-		this.life = vida;
-	}
+	/*
+	 * public void setLife(int vida) { this.life = vida; }
+	 */
 
 	public int getAttack() {
 		return attack;
 	}
 
-	public void setAttack(int ataque) {
-		this.attack = ataque;
-	}
+	/*
+	 * public void setAttack(int ataque) { this.attack = ataque; }
+	 */
 
-	public int getArmor() {
-		return armor;
-	}
-
-	public void setArmor(int armadura) {
-		this.armor = armadura;
-	}
+	/*
+	 * public int getArmor() { return armor; }
+	 * 
+	 * public void setArmor(int armadura) { this.armor = armadura; }
+	 */
 
 	// Metodos
 
 	public void takeDamage(Champion other) {
-		//Corrigir essa logica
-		life = (life + armor) - other.getAttack();
-		if (life < 0) {
-			life = 0;
-		} else if (armor > other.getAttack()) {
-			life -= 1;
+		int damage;
+		if (armor > other.getAttack()) {
+			damage = 1;
+		} else {
+			damage = other.getAttack() - armor;
 		}
 
+		life -= damage;
+
+		if (life < 0) {
+			life = 0;
+		}
 	}
 
 	public String status() {
