@@ -16,37 +16,17 @@ public class Champion {
 		this.armor = armadura;
 	}
 
-	// Metodos Get e Set
-
-	/*
-	 * public String getName() { return name; }
-	 * 
-	 * public void setName(String name) { this.name = name; }
-	 */
+	// metodos Get e Set
 
 	public int getLife() {
 		return life;
 	}
 
-	/*
-	 * public void setLife(int vida) { this.life = vida; }
-	 */
-
 	public int getAttack() {
 		return attack;
 	}
 
-	/*
-	 * public void setAttack(int ataque) { this.attack = ataque; }
-	 */
-
-	/*
-	 * public int getArmor() { return armor; }
-	 * 
-	 * public void setArmor(int armadura) { this.armor = armadura; }
-	 */
-
-	// Metodos
+	// metodos
 
 	public void takeDamage(Champion other) {
 		int damage;
